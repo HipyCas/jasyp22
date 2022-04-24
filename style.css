@@ -1,0 +1,150 @@
+/** VARIABLES **/
+:root {
+  --dark: #282E33;
+  --darker: #25373A;
+  --lighter: #164852;
+  --light: #495E67;
+  --primary: #FF3838;
+}
+
+/** CSS RESET **/
+body, html, h1, h2, h3, h4, h5, h6, p, hr, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/** GENERAL **/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  overflow-y: hidden;
+}
+
+::selection {
+  background-color: #FF3838aa;
+}
+
+::-moz-selection {
+  background-color: #FF3838aa;
+}
+
+a {
+  text-decoration-color: var(--primary);
+  text-decoration-skip-ink: all;
+  text-underline-offset: 2px;
+  color: inherit;
+  transition: background 0.2s ease-out;
+  border-radius: 3px;
+}
+
+a:hover {
+  background-color: var(--primary);
+}
+
+ul {
+  margin-left: 2rem;
+}
+
+p {
+  margin: 4px 0;
+}
+
+/** HEADER **/
+
+/* Header container */
+header {
+  height: calc(2.5rem + 1rem);
+  padding: 1rem 2rem;
+  box-shadow: #FF38382a 00px 10px 15px 0;
+  background-color: var(--light);
+  color: #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: fixed;
+  top: 0;
+  width: calc(100vw - 2*2rem);
+  z-index: 10;
+}
+
+/* Page title */
+h1 {
+  font-size: 2.5rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  /* color: var(--primary); */
+}
+
+/* Page nav links/sections */
+nav {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+  flex-shrink: 1;
+  justify-content: end;
+  gap: 0.15rem 0.3rem;
+}
+
+/* Nav link */
+nav > a {
+  color: inherit;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+nav > a:hover {
+  background: var(--primary);
+}
+
+/** MAIN CONTENT **/
+
+main {
+  padding: 1.5rem 1.5rem;
+  background-color: var(--dark);
+  color: #eee;
+  position: absolute;
+  top: calc(2.5rem + 2*1rem + 1rem);
+  height: calc(100vh - (2.5rem + 2*1rem + 1rem + 2*1.5rem));
+  overflow-x: scroll;
+}
+
+/* Conference card */
+section {
+  background-color: var(--lighter);
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-radius: 5px;
+  box-shadow: #495e672a 7px 7px 10px 2px;
+}
+
+/* Conference card spacing */
+section:not(:first-of-type) {
+  margin-top: 2rem;
+}
+
+/* Conference title */
+h2 {
+  padding: 1.5rem 0 0.3rem 0;
+}
+
+/* Conference title divider */
+hr {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+h3, h4, h5, h6 {
+  margin: 0.5rem 0;
+}
+
+h3::before {
+  content: '#';
+  margin-right: 2px;
+}
