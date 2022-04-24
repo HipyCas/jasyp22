@@ -7,3 +7,17 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+console.log(
+  Autolinker.link(document.querySelector("main").innerHTML, {
+    newWindow: true,
+  })
+);
+
+document.querySelector("main").innerHTML = Autolinker.link(
+  document.querySelector("main").innerHTML,
+  {
+    newWindow: true,
+    stripPrefix: true,
+  }
+);
