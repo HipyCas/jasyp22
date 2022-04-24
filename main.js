@@ -17,7 +17,10 @@ console.log(
 document.querySelector("main").innerHTML = Autolinker.link(
   document.querySelector("main").innerHTML,
   {
-    newWindow: true,
+    // newWindow: true,
     stripPrefix: true,
   }
+).replace(
+  /\(!\)/g,
+  '<span style="color:var(--primary); font-weight: 700; margin: 0 3px">(!)</span>'
 );
